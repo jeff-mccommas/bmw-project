@@ -1,5 +1,4 @@
 import { Component, OnInit, Input} from '@angular/core';
-import {createInput} from '@angular/compiler/src/core';
 
 @Component({
   selector: 'bwm-rental-list-item',

@@ -1,4 +1,4 @@
-import { RentalModule } from './rental.module';
+import { RentalModule } from './shared/rental.module';
 
 describe('RentalModule', () => {
   let rentalModule: RentalModule;

@@ -6,7 +6,7 @@ import { HeaderComponent } from './header/header.component';
 import { TempComponent } from './temp/temp.component';
 import { RentalComponent } from './rental/rental.component';
 import {Routes, RouterModule} from '@angular/router';
-import {RentalModule} from './rental/rental.module';
+import {RentalModule} from './rental/shared/rental.module';
 
 const  routes: Routes = [
   {path: '', component: RentalComponent},
