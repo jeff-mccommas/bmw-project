@@ -23,7 +23,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -33,6 +33,12 @@
                 {
                   "replace": "src/environments/environment.ts",
                   "with": "src/environments/environment.prod.ts"
+                },
+                "stylePreprocessorOptions",
+                {
+                  "includePaths": [
+                    "./styles"
+                  ]
                 }
               ],
               "optimization": true,
@@ -72,7 +78,8 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.scss",
+              ".node_modules/bootstrap/dist/css/bootstrap.css"
             ],
             "scripts": [],
             "assets": [
@@ -123,5 +130,10 @@
       }
     }
   },
-  "defaultProject": "bmw-project"
+  "defaultProject": "bmw-project",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "scss"
+    }
+  }
 }
