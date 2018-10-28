@@ -6,8 +6,8 @@ import { HeaderComponent } from './header/header.component';
 import { TempComponent } from './temp/temp.component';
 import { RentalComponent } from './rental/rental.component';
 import {Routes, RouterModule} from '@angular/router';
-import { RentalListComponent } from './rental/rental-list/rental-list.component';
-import { RentalListItemComponent } from './rental/rental-list-item/rental-list-item.component';
+import {RentalModule} from './rental/rental.module';
+
 const  routes: Routes = [
   {path: '', component: RentalComponent},
   {path: 'temp', component: TempComponent},
@@ -17,13 +17,11 @@ const  routes: Routes = [
   declarations: [
     AppComponent,
     HeaderComponent,
-    TempComponent,
-    RentalComponent,
-    RentalListComponent,
-    RentalListItemComponent,
+    TempComponent
   ],
   imports: [
     BrowserModule,
+    RentalModule,
     RouterModule.forRoot(routes),
   ],
   providers: [],
