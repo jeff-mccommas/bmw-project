@@ -12,9 +12,11 @@ export class RentalListComponent implements OnInit {
   constructor( private rentalService: RentalService) { }
 
   ngOnInit() {
+
     const rentalObservable  = this.rentalService.getRentals();
     rentalObservable.subscribe(
-      (data) => {
+      (rentals) => {
+        this.rentals = rentals;
       },
       (err) => {
       }, () => {
