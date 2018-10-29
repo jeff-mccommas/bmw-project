@@ -1,10 +1,12 @@
 import { Injectable } from '@angular/core';
+import {Observable} from 'rxjs';
+import {map} from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RentalService {
-  private  rentals: any[] = [{
+  private rentals: any[] = [{
     id: 1,
     title: 'Central Apartment',
     city: 'New York',
@@ -56,9 +58,13 @@ export class RentalService {
       shared: true,
       createdAt: '24/12/2017'
     }];
-  public  getRentals(): any[] {
-   return this.rentals;
-  }
 
-  constructor() { }
+  public getRentals(): any {
+    const rentalObservable = new Observable((observer) => {
+      setTimeout(() => {
+
+      }, 2000 );
+      return rentalObservable;
+    });
+  }
 }
