@@ -62,18 +62,10 @@ export class RentalService {
   public getRentals(): any {
     const rentalObservable = new Observable((observer) => {
       setTimeout(() => {
-
+        observer.next(this.rentals);
       }, 1000 );
-      setTimeout(() => {
-
-      }, 2000 );
-      observer.error('i am an error')
-      observer.next(this.rentals)
-      setTimeout(() => {
-
-      }, 3000 );
-      observer.complete()
-      return rentalObservable;
     });
+
+    return rentalObservable;
   }
 }
