@@ -8,9 +8,9 @@ import {Rental} from '../shared/rental.model';
   styleUrls: ['./rentail-detail.component.scss']
 })
 export class RentailDetailComponent implements OnInit {
-rental: Rental
   constructor( private route: ActivatedRoute,
                private rentalService: RentalService) { }
+rental: Rental
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -19,7 +19,7 @@ rental: Rental
 
       })
     );
-    getRental(rentalId);
+    getRental(rentalId:string);
     this.rentalService.getRentalById().subscribe((rental: Rental) => {
       this.rental = rental;
     });
