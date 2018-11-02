@@ -5,6 +5,7 @@ import { HeaderComponent } from './header/header.component';
 import {Routes, RouterModule} from '@angular/router';
 import {RentalModule} from './rental/shared/rental.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 const  routes: Routes = [
 ]
 
@@ -15,10 +16,11 @@ const  routes: Routes = [
   ],
   imports: [
     BrowserModule,
-    RentalModule,
-    BrowserAnimationsModule
-    ,
+
+    BrowserAnimationsModule,
+
     RouterModule.forRoot(routes),
+    RentalModule
   ],
   providers: [],
   bootstrap: [AppComponent]

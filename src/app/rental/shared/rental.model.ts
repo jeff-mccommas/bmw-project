@@ -7,7 +7,7 @@ export class Rental {
   image: string;
   bedrooms: number;
   description: string;
-  dailyRate: string;
+  dailyRate: number;
   shared: boolean;
   createdAt: string;
 }

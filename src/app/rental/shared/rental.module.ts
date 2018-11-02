@@ -33,7 +33,8 @@ export const routes: Routes = [
   ]
 
 })
-export class RentalModule { }
+export class RentalModule {
+}
 
 
 

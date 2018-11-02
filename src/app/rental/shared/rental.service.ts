@@ -5,9 +5,7 @@ import {Rental} from './rental.model';
   providedIn: 'root'
 })
 export class RentalService {
-  // @ts-ignore
-  // @ts-ignore
-  private rentals: Rental[] = [{
+  public rentals: Rental[] = [{
     id: '1',
     title: 'Central Apartment',
     city: 'New York',
@@ -59,6 +57,18 @@ export class RentalService {
       shared: true,
       createdAt: '24/12/2017'
     }];
+  public  getRentalById(rentalId: string): Observable<Rental> {
+ return new  Observable <Rental>((observer) => {
+   setTimeout(() => {
+     this.rentals.find((rental) => {
+       return rental.id === rentalId;
+     });
+     observer.next(foundRental);
+
+   }, 500);
+ });
+
+  }
 
   public getRentals(): Observable<Rental[]> {
     const rentalObservable: Observable<Rental[]> = new Observable((observer) => {
