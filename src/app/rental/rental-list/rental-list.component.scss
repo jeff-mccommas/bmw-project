@@ -34,13 +34,16 @@ html,body,p{
 
 
       .card-title {
-        font-size: 19px;
+        font-size: 12px;
         margin: 3px 0;
+      }
+      h3.card-title {
+        font-size: .5rem!important;
       }
 
 
       .card-text {
-        font-size: 14px;
+        font-size: 14px!important;
         font-weight: 300;
         color: #7e7e7e;
         margin-bottom: 0;
