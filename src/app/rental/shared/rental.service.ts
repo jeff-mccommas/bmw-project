@@ -5,8 +5,8 @@ import {Rental} from './rental.model';
   providedIn: 'root'
 })
 export class RentalService {
-  private rentals: Rental[] = [{
-    id: '1',
+  private rentals: any[] = [{
+    id: 1,
     title: 'Central Apartment',
     city: 'New York',
     street: 'Times Sqaure',
@@ -19,7 +19,7 @@ export class RentalService {
     createdAt: '24/12/2017'
   },
     {
-      id: '2',
+      id: 2,
       title: 'Central Apartment 2',
       city: 'San Francisco',
       street: 'Main street',
@@ -32,7 +32,7 @@ export class RentalService {
       createdAt: '24/12/2017'
     },
     {
-      id: '3',
+      id: 3,
       title: 'Central Apartment 3',
       city: 'Bratislava',
       street: 'Hlavna',
@@ -45,7 +45,7 @@ export class RentalService {
       createdAt: '24/12/2017'
     },
     {
-      id:  '4',
+      id: 4,
       title: 'Central Apartment 4',
       city: 'Berlin',
       street: 'Haupt strasse',
