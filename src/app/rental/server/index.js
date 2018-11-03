@@ -1,8 +1,32 @@
 const cors = require("cors");
 const express = require('express');
 const app = express();
-const path = require('path');
 const bodyParser = require('body-parser');
+const logger = require('morgan');
+const chalk = require('chalk');
+const errorHandler = require('errorhandler');
+const lusca = require('lusca');
+const dotenv = require('dotenv');
+const flash = require('express-flash');
+const path = require('path');
+const mongoose = require('mongoose');
+const passport = require('passport');
+var dburl = 'mmongodb://<appuser:password1@ds151393.mlab.com:51393/bwm-ng-dev';
+var retry = null;
+mongoose.connect(dburl);
+// CONNECTION EVENTS
+mongoose.connection.on('connected', function() {
+    console.log('Mongoose connected to ' + dburl);
+  });
+  mongoose.connection.on('error', function(err) {
+    console.log('Mongoose connection error: ' + err);
+  });
+  mongoose.connection.on('disconnected', function() {
+    console.log('Mongoose disconnected');
+  });
+app.get('/rentals', (req, res) => {
+   res.json({'success': true})
+});
 
 
 
