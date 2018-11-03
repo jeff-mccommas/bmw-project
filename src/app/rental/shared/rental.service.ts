@@ -5,7 +5,7 @@ import {Rental} from './rental.model';
   providedIn: 'root'
 })
 export class RentalService {
-  public rentals: Rental[] = [{
+  private rentals: Rental[] = [{
     id: '1',
     title: 'Central Apartment',
     city: 'New York',

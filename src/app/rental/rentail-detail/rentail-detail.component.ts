@@ -10,7 +10,7 @@ import {Rental} from '../shared/rental.model';
 export class RentailDetailComponent implements OnInit {
   constructor( private route: ActivatedRoute,
                private rentalService: RentalService) { }
-rental: Rental
+  rental: Rental
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -19,12 +19,11 @@ rental: Rental
 
       })
     );
-    getRental(rentalId:string);
-    this.rentalService.getRentalById().subscribe((rental: Rental) => {
-      this.rental = rental;
-    });
-
   }
 
-
+  getRental(rentalId: string) {
+    this.rentalService.getRentalById(rentalId).subscribe((rental: Rental) => {
+      this.rental = rental;
+    });
+  }
 }
